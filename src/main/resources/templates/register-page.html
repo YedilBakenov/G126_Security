@@ -13,19 +13,26 @@
 </head>
 <body>
 <div class="container">
-    <form class="form-signin" method="post" action="/auth">
-        <h2 class="form-signin-heading">Please sign in</h2>
+    <form class="form-signin" method="post" th:action="@{'/register-user'}">
         <p>
-            <label for="username" class="sr-only">Username</label>
-            <input type="email" id="username" name="email" class="form-control" placeholder="email" required autofocus>
+            <label for="username" class="sr-only">FullName</label>
+            <input type="text" id="username" name="fullName" class="form-control" placeholder="fullname" required autofocus>
         </p>
         <p>
-            <label for="password" class="sr-only">Password</label>
+            <label for="userEmail" class="sr-only">ENTER YOUR FULL EMAIL:</label>
+            <input type="email" id="userEmail" name="email" class="form-control" placeholder="email" required autofocus>
+        </p>
+        <p>
+            <label for="password" class="sr-only">ENTER YOUR PASSWORD:</label>
             <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
         </p>
+        <p>
+            <label for="PasswordAnother" class="sr-only">ENTER YOUR PASSWORD:</label>
+            <input type="password" id="PasswordAnother" name="rePassword" class="form-control" placeholder="RePassword" required>
+        </p>
         <input name="_csrf" type="hidden" value="CQXl5908YFv1qndKmCDtlBIO9p-U2OQl7dOZGhOnjw247tq1b2HUg-8PWDjYnBErqQ3Z9XM52_6svNwI3er_f3ee7m6IjOqG" />
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        <a class="btn btn-success btn-lg btn-block" th:href="@{'/register'}" type="button">Sign up</a>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">REGISTER</button>
+        <a class="btn btn-success btn-secondary btn-block" th:href="@{'/sign-in'}">Sign up</a>
     </form>
 </div>
 </body>

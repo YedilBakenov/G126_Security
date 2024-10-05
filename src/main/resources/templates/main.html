@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <h1>HELLO! YOU ARE AUTHENTIFICATED!</h1>
+
+    <form th:action="@{'/change-pas'}" method="post" >
+        <input type="password" name="password"> <br>
+        <input type="password" name="newPassword"> <br>
+        <input type="password" name="reNewPassword"> <br>
+        <button>CHANGE PASSWORD</button>
+    </form>
+
+    <form action="/log-out" method="post">
+        <button>LOG OUT</button>
+    </form>
 </body>
 </html>
