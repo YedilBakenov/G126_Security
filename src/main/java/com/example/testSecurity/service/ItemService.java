@@ -1,5 +1,6 @@
 package com.example.testSecurity.service;
 
+import com.example.testSecurity.dto.ItemDto;
 import com.example.testSecurity.model.Item;
 import org.springframework.stereotype.Service;
 
